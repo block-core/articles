@@ -6,7 +6,7 @@ import { nip19 } from 'nostr-tools';
 export interface DocumentEvent extends NostrEvent {
   kind: 30023 | 30024;
 }
-// Angor npub converted to hex
+// Nostr npub converted to hex
 const ANGOR_NPUB = 'npub1wrzguj625auyeysfuuxzf7ywhzlwfz9gm3fml2lul72gwqxw8n9swtcm02';
 const ANGOR_PUBKEY = nip19.decode(ANGOR_NPUB).data as string;
 
@@ -35,7 +35,7 @@ export function useDocuments(filterType: 'all' | 'connections' | 'angor' = 'all'
           ];
         }
       } else if (filterType === 'angor') {
-        // Query documents from Angor only
+        // Query documents from Nostr only
         const baseFilter = { authors: [ANGOR_PUBKEY], limit: 20 };
         if (pageParam) {
           filters = [

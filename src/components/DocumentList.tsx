@@ -169,7 +169,7 @@ export function DocumentList({ showCreateButton = true }: DocumentListProps) {
                 <BookOpen className="h-6 w-6 text-primary" />
               </div>
               <h1 className={`text-4xl sm:text-5xl font-bold ${styles.gradientText}`}>
-                Angor Articles
+                Nostr Articles
               </h1>
             </div>
             
@@ -264,7 +264,7 @@ export function DocumentList({ showCreateButton = true }: DocumentListProps) {
           </div>
         </div>
         
-        {/* Connections and Angor Filters */}
+        {/* Connections and Nostr Filters */}
         {user && (
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex items-center space-x-2">
@@ -273,7 +273,7 @@ export function DocumentList({ showCreateButton = true }: DocumentListProps) {
                 checked={showConnectionsOnly}
                 onCheckedChange={(checked) => {
                   setShowConnectionsOnly(checked);
-                  if (checked) setShowAngorOnly(false); // Disable Angor filter when connections is enabled
+                  if (checked) setShowAngorOnly(false); // Disable Nostr filter when connections is enabled
                 }}
                 disabled={showAngorOnly}
               />
@@ -284,16 +284,16 @@ export function DocumentList({ showCreateButton = true }: DocumentListProps) {
             
             <div className="flex items-center space-x-2">
               <Switch
-                id="angor-only"
+                id="nostr-only"
                 checked={showAngorOnly}
                 onCheckedChange={(checked) => {
                   setShowAngorOnly(checked);
-                  if (checked) setShowConnectionsOnly(false); // Disable connections filter when Angor is enabled
+                  if (checked) setShowConnectionsOnly(false); // Disable connections filter when Nostr is enabled
                 }}
                 disabled={showConnectionsOnly}
               />
-              <Label htmlFor="angor-only">
-                Show only Angor articles
+              <Label htmlFor="nostr-only">
+                Show only Nostr articles
               </Label>
             </div>
           </div>

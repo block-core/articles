@@ -18,7 +18,7 @@ export function Header({
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="flex flex-col">
-              <h1 className="text-xl font-semibold">Angor Article</h1>
+              <h1 className="text-xl font-semibold">Nostr Article</h1>
               <p className="text-sm text-muted-foreground">Your decentralized article publishing platform</p>
             </div>
             {title && (

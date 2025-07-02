@@ -13,7 +13,7 @@ export default function Dashboard() {
         {!user && (
           <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-lg">
             <div className="text-center">
-              <h2 className="text-xl font-semibold mb-2">Welcome to Angor Article</h2>
+              <h2 className="text-xl font-semibold mb-2">Welcome to Nostr Article</h2>
               <p className="text-muted-foreground mb-4">
                 Browse and discover long-form articles on the Nostr network. 
                 Connect your Nostr account to create and publish your own articles.

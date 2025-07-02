@@ -1,6 +1,6 @@
 {
-  "name": "Angor Article",
-  "short_name": "Angor Article",
+  "name": "Nostr Article",
+  "short_name": "Nostr Article",
   "description": "Decentralized article publishing platform for Nostr",
   "start_url": "/",
   "display": "standalone",

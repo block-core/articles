@@ -21,9 +21,14 @@ jobs:
         with:
           node-version: '20'
 
-
       - name: Install Dependencies
-        run: npm install
+        run: |
+          echo "Setting JSR registry configuration..."
+          npm config set @jsr:registry https://npm.jsr.io
+          echo "Current npm config:"
+          npm config list
+          echo "Installing dependencies..."
+          npm install || (echo "Install failed, trying with legacy peer deps..." && npm install --legacy-peer-deps)
 
       - name: Build
         env:
@@ -40,4 +45,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
-          cname: article.angor.io
